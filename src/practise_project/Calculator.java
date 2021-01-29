@@ -1,5 +1,6 @@
 
 /* In this simple arithemetic calculator, user can enter their desire operation at once.
+	It performs left to right operations.
 	They can use as many operations at once but have to use space after each number and operators.
 	For example: if an user want to perform "1+2*3-4/2", user has to enter: "1 + 2 * 3 - 4 / 2"
 */
@@ -12,17 +13,9 @@ public class Calculator {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
+		System.out.println("Welome to simple arithmetic operation. It performs left to right operations regardless of operators\n");
 		System.out.println("Enter the operation you want to procede. Use space after each number and arithmetic operators\n");
 		String s= input.nextLine();
-		
-		//for loop to check space in odd index of string
-		for(int i=1; i<s.length();) {
-			if(s.charAt(i)!= ' '){
-				System.out.println("Please run again and Use Space after each numbers and operators(+,-,*,/) in the format: (Number)(Space)(Operator)(Space)\n");
-				System.exit(0);
-			}
-			i=i+2;
-		}
 		
 		String[] comp = s.split("\\+|\\-|\\*|\\/"); //parsing interms of arithmetic operators
 		String[] comp2 = s.split(" ");//parsing so that I can keep track of type of operator
