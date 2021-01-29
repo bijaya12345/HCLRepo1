@@ -15,6 +15,7 @@ public class Calculator {
 		System.out.println("Enter the operation you want to procede. Use space after each number and arithmetic operators\n");
 		String s= input.nextLine();
 		
+		//for loop to check space in odd index of string
 		for(int i=1; i<s.length();) {
 			if(s.charAt(i)!= ' '){
 				System.out.println("Please run again and Use Space after each numbers and operators(+,-,*,/) in the format: (Number)(Space)(Operator)(Space)\n");
