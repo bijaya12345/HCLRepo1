@@ -1,9 +1,9 @@
 package inclasswork;
 
-public class Thread1 extends Thread {
+public class ExtendThread extends Thread {
 
 	public static void main(String[] args) {
-		Thread1 th = new Thread1();
+		ExtendThread th = new ExtendThread();
 		th.start();
 	}
 	
