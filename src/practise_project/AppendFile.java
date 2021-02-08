@@ -1,3 +1,8 @@
+/*
+ * In this class, user can append in existing file Or,
+ * Create new file, write on it and append it 
+ */
+
 package practise_project;
 
 import java.io.BufferedWriter;
@@ -9,13 +14,13 @@ import java.io.IOException;
 public class AppendFile {
 
 	public static void main(String[] args) {
-		File sp = null;
-		sp = new File("test.txt");
+		File sp = new File("test.txt");
 		if (sp.exists()) {
 			System.out.println("Already exists");
 		} else {
 			try {
 				sp.createNewFile();
+				FileHandling.writeFile(sp);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

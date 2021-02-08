@@ -1,3 +1,9 @@
+/*
+ * In this class, user can create, write and read file. 
+ * test.txt file is created inside HclPractice folder.
+ * To append file, run Appendfile.java file
+ */
+
 package practise_project;
 
 import java.io.File;
@@ -10,16 +16,9 @@ public class FileHandling {
 
 	public static void main(String[] args) {
 
-		File sp = null;
-		FileWriter sd = null;
-		try {
-			sp = new File("test.txt");
-			sd = new FileWriter("test.txt");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		File sp = new File("test.txt");
 		createFile(sp);
-		writeFile(sd);
+		writeFile(sp);
 		readFile(sp);
 	}
 
@@ -38,9 +37,10 @@ public class FileHandling {
 
 	}
 
-	private static void writeFile(FileWriter sd) {
-
+	public static void writeFile(File sp) {
+		FileWriter sd = null;
 		try {
+			sd = new FileWriter("test.txt");
 			sd.write("Hello World. Whats up.\nHey you");
 			sd.close();
 			System.out.println("Successfully written in file");
