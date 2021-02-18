@@ -1,3 +1,5 @@
+package practise_project;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -8,7 +10,6 @@ public class Main {
 	static ArrayList<Integer> expenses = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
-		
 
 		expenses.add(1000);
 		expenses.add(2300);
@@ -95,11 +96,10 @@ public class Main {
 
 	private static void searchExpenses(ArrayList<Integer> arrayList) {
 		// Complete the method
-		System.out.println("Enter the amount you want to search");
+		System.out.println("Enter the expense you need to search:\t");
 		Scanner input = new Scanner(System.in);
 		Integer x = input.nextInt();
 		// int leng = arrayList.size();
-		System.out.println("Enter the expense you need to search:\t");
 		Integer c = arrayList.stream().filter(b -> x == b.intValue()).findAny().orElse(null);
 		if (c != null) {
 			int index = arrayList.indexOf(c);
